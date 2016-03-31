@@ -29,28 +29,21 @@ Route::get('effacer/{id}', 'ProduitsController@destroy');
    Route::get('/home', 'HomeController@index');
    
 
-   Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web']], function () {
  Route::auth();
-
-
-
 });
 
 Route::group(['middleware' => ['web', 'auth']], function () {
     Route::resource('produits', 'ProduitsController');    
     Route::resource('utilisateurs', 'UserController');
     Route::resource('client', 'ClientController');
-    Route::resource('rdv', 'RdvController');
-    
+    Route::resource('rdv', 'RdvController');    
     Route::get('daterdv', 'RdvController@showdaterdv');
     Route::resource('admins', 'AdminsController');
     Route::resource('mail', 'MailController');
     Route::resource('commandes', 'CommandesController');
     Route::resource('product', 'ProductController');
     Route::resource('residence', 'ResidenceController');
-    
-
-
 
 
 });

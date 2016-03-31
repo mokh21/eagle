@@ -34,7 +34,7 @@
 
 			<?php echo Form::text('date_rdv'); ?> 
 		</li>
-		<a href="http://localhost/laravelapp/public/daterdv">Afficher</a>
+		
 		<br>
 		<li>
 			<?php echo Form::label('heure_rdv', 'Heure_rdv:'); ?>

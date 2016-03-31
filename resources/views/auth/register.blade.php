@@ -38,6 +38,8 @@
                             </div>
                         </div>
 
+
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Password</label>
 
@@ -65,6 +67,12 @@
                                 @endif
                             </div>
                         </div>
+
+
+
+        
+                                <input type="hidden" class="form-control" name="type" value="Client">
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

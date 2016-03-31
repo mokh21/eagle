@@ -16,6 +16,7 @@ use Request;
 use App\Http\Requests\CreateProduitsRequest;
 use View;
 
+
 class ProduitsController extends Controller
 {
     
@@ -33,14 +34,14 @@ class ProduitsController extends Controller
 
     public function store(CreateProduitsRequest $request)
     {
-    	 
+ 	 
 Produits::create($request->all());
  return ("Insertion Avec Succés");
     }
 
        public function index()
     {
-        $products = Produits::paginate(2);
+        $products = Produits::all();
 
         return view('produits.index', ['produit' => $products]);
     }

@@ -13,6 +13,10 @@
 <p>visite virtuelle : {{ $p->visite_virtuelle }}</p>
 <p>Résidence : {{ $p->residence }}</p>
 
+<img src='/images/{{ $p->image }}'>
+
+<img src="{{ $p->image }}" />
+
 
 {{ Form::open(['method' => 'GET' , 'action' => ['ProduitsController@show' , $p->id]]) }}
 <input type="submit" value="afficher">
@@ -26,8 +30,4 @@
 <input type="submit" value="effacer">
 {{ Form::close() }}
 @endforeach
-
-<?php
-echo $produit->render();
-?>
 

@@ -15,11 +15,12 @@ use App\Http\Requests\CreateUserRequest;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 
+
 class UserController extends Controller
 {
 	public function index()
     {
-        $user = User::all();
+        $user = User::paginate(3);
 
         return view('showuser', ['utilisateur' => $user]);
     }

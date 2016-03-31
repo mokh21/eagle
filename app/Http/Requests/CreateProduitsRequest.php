@@ -30,8 +30,8 @@ class CreateProduitsRequest extends Request
            'surface' => 'required',
            'type' => 'required',
            'localite' => 'required',
-           'code_p' => 'required',
-           'residence' => 'required'
+           'code_p' => 'required'
+           //'residence' => 'required'
     ];
            
     }

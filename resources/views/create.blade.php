@@ -1,5 +1,4 @@
 
-
 {!! Form::open(array('url' => 'produits')) !!}
 
 <html> Prix </html>
@@ -38,14 +37,7 @@
 
 {{ Form::select('category', $n) }}
 
-
-
-
-
-
 {!! Form::submit('Envoyer'); !!}
-
-
 {!! Form::close() !!}
 
 @if ($errors->any())

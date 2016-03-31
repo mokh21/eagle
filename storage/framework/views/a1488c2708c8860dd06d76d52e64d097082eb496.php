@@ -1,5 +1,4 @@
 
-
 <?php echo Form::open(array('url' => 'produits')); ?>
 
 
@@ -48,14 +47,7 @@
 <?php echo e(Form::select('category', $n)); ?>
 
 
-
-
-
-
-
 <?php echo Form::submit('Envoyer');; ?>
-
-
 
 <?php echo Form::close(); ?>
 

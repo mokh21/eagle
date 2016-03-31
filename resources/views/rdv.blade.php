@@ -24,7 +24,7 @@
 			{!! Form::label('date_rdv', 'Date_rdv:') !!}
 			{!! Form::text('date_rdv') !!} 
 		</li>
-		<a href="http://localhost/laravelapp/public/daterdv">Afficher</a>
+		
 		<br>
 		<li>
 			{!! Form::label('heure_rdv', 'Heure_rdv:') !!}

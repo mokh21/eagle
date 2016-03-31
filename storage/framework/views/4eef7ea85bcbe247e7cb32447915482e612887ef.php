@@ -13,6 +13,10 @@
 <p>visite virtuelle : <?php echo e($p->visite_virtuelle); ?></p>
 <p>Résidence : <?php echo e($p->residence); ?></p>
 
+<img src='/images/<?php echo e($p->image); ?>'>
+
+<img src="<?php echo e($p->image); ?>" />
+
 
 <?php echo e(Form::open(['method' => 'GET' , 'action' => ['ProduitsController@show' , $p->id]])); ?>
 
@@ -32,8 +36,4 @@
 <?php echo e(Form::close()); ?>
 
 <?php endforeach; ?>
-
-<?php
-echo $produit->render();
-?>
 
