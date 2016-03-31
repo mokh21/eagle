@@ -33,22 +33,20 @@ Route::group(['middleware' => ['web']], function () {
  Route::auth();
 });
 
-Route::group(['middleware' => ['web', 'auth']], function () {
+Route::group(['middleware' => ['web', 'auth', 'App\Http\Middleware\AdminMiddleware']], function () {
     Route::resource('produits', 'ProduitsController');    
     Route::resource('utilisateurs', 'UserController');
-    Route::resource('client', 'ClientController');
-    Route::resource('rdv', 'RdvController');    
-    Route::get('daterdv', 'RdvController@showdaterdv');
-    Route::resource('admins', 'AdminsController');
-    Route::resource('mail', 'MailController');
     Route::resource('commandes', 'CommandesController');
-    Route::resource('product', 'ProductController');
-    Route::resource('residence', 'ResidenceController');
-
-
 });
     
+Route::group(['middleware' => ['web', 'auth', 'App\Http\Middleware\AdMiddleware']], function () {
 
+    Route::resource('client', 'ClientController');
+    Route::resource('rdv', 'RdvController');   
+    Route::resource('admins', 'AdminsController');
+    Route::resource('mail', 'MailController');
+    Route::resource('residence', 'ResidenceController');
+});
 
 
 

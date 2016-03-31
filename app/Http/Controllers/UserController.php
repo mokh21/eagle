@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\MessageBag;
 use App\Http\Requests\CreateUserRequest;
 use Illuminate\Pagination\LengthAwarePaginator;
-
-
+use App\Http\Requests\CreateUtilisateursRequest;
 
 class UserController extends Controller
 {
